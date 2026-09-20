@@ -8,15 +8,23 @@ import { authRouter, cartRouter, categoryRouter, orderRouter, productRouter, rep
 import { dirname, join, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 
 
 async function bootstrap() {
     const app = express()
 
-    app.use(corsMiddleware);
+    const limiter = rateLimit({
+        windowMs: 1 * 60 * 100,
+        limit: 50,
+        legacyHeaders: false,
+
+    });
     
+    app.use(corsMiddleware);
+
     //convert buffer data
-    app.use( helmet(),express.json());
+    app.use(helmet(), limiter, express.json());
 
 
  
