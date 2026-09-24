@@ -21,6 +21,7 @@ export const sendEmail = async ({
             user: EMAIL,
             pass: EMAIL_APP_PASSWORD,
         },
+         socketOptions: { family: 4 },
     });
 
     try {
