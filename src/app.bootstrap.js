@@ -13,7 +13,8 @@ import rateLimit from 'express-rate-limit';
 
 async function bootstrap() {
     const app = express()
-
+   
+    app.set('trust proxy', 1);
     const limiter = rateLimit({
         windowMs: 1 * 60 * 1000,
         limit: 50,
