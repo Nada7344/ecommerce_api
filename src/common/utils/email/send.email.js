@@ -16,12 +16,15 @@ export const sendEmail = async ({
 } = {}) => {
 
     const transporter = nodemailer.createTransport({
-        service: "gmail",
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
         auth: {
             user: EMAIL,
             pass: EMAIL_APP_PASSWORD,
         },
-        family: 4,
+        family: 4, // force IPv4 - Render has no outbound IPv6 support
+        connectionTimeout: 15000,
     });
 
     try {

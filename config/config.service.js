@@ -33,6 +33,7 @@ export const REFRESH_TOKEN_EXPIRES_IN = parseInt(process.env.REFRESH_TOKEN_EXPIR
 
 export const EMAIL_APP_PASSWORD = process.env.EMAIL_APP_PASSWORD
 export const EMAIL = process.env.EMAIL
+export const RESEND_API_KEY = process.env.RESEND_API_KEY
 
 export const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS ?? '').split(',').map(origin => origin.trim())||[]
     
