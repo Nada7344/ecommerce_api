@@ -80,7 +80,7 @@ const sendEmailOtp = async ({ email, subject, title }) => {
     await set({
         key: otpKey({ email, subject }),
         value: await generateHash({ plaintext: `${code}` }),
-        ttl: 120,
+        ttl: 600,
     });
 
 
