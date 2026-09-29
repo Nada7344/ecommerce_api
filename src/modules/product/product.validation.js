@@ -51,7 +51,8 @@ export const updateProduct = {
     .items(
         generalValidationFields.file(fileFieldValidation.image).required()
     )
-    .min(1)
+    // no .min(1): multer sets req.files = [] when the admin edits a product without
+    // choosing new images, and that must be valid (images are optional on update).
     .max(2)
 };
 
