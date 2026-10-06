@@ -193,7 +193,7 @@ Review status values: `Pending`, `Approved`, `Declined`. Admins are notified by 
 
 ## 🚀 Deployment
 
-- **API** deployed on [Render]([https://render.com](https://ecommerce-api-ex23.onrender.com)) 
+- **API** deployed on Render:https://render.com](https://ecommerce-api-ex23.onrender.com
 
 
 
