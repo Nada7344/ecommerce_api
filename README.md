@@ -193,10 +193,8 @@ Review status values: `Pending`, `Approved`, `Declined`. Admins are notified by 
 
 ## 🚀 Deployment
 
-- **API** deployed on [Render](https://render.com) (free tier, Node web service)
-- **Database** on [MongoDB Atlas](https://www.mongodb.com/atlas) (free M0 cluster)
-- **Cache** on [Upstash](https://upstash.com) (free Redis)
+- **API** deployed on [Render]([https://render.com](https://ecommerce-api-ex23.onrender.com)) 
 
-Environment variables are configured directly on the hosting platform — never committed to the repository.
+
 
 
